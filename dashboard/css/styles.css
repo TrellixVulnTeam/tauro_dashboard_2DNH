@@ -272,7 +272,7 @@ body {
     background-color: #FF2E25;
     right: 22rem;
     box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.25);
-    display: grid;
+    display: none;
     border-radius: 1rem;
     grid-template-columns: 1fr;
     grid-template-rows: 8% 79% 9% 4%; }
@@ -812,62 +812,43 @@ body {
           outline: none;
           margin-right: 0.6rem;
           font-family: 'Roboto', sans-serif; }
-  .content_ventas .total-ventas {
-    width: 100%;
-    height: 30%;
-    border-bottom: 1px solid #9b9b9b; }
-    .content_ventas .total-ventas .valor {
-      height: 33%;
-      width: 98%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-left: 0.2rem; }
-      .content_ventas .total-ventas .valor .v1 {
-        height: 86%;
-        width: 95%;
-        display: flex; }
-        .content_ventas .total-ventas .valor .v1 .ventas {
-          width: 70%;
-          height: 100%; }
-          .content_ventas .total-ventas .valor .v1 .ventas p {
-            margin: 0;
-            font-family: 'Roboto', sans-serif; }
-            .content_ventas .total-ventas .valor .v1 .ventas p strong {
-              font-size: 0.7rem; }
-          .content_ventas .total-ventas .valor .v1 .ventas:last-child {
-            font-size: 1.4rem;
-            line-height: 1.5rem; }
-      .content_ventas .total-ventas .valor .pedidos {
-        width: 30%;
-        height: 100%;
+    .content_ventas .detallado .total-ventas {
+      width: 100%;
+      height: 30%;
+      border-bottom: 1px solid #9b9b9b; }
+      .content_ventas .detallado .total-ventas .valor {
+        height: 33%;
+        width: 98%;
         display: flex;
-        flex-direction: column;
-        text-align: right; }
-        .content_ventas .total-ventas .valor .pedidos p {
-          margin: 0;
-          font-size: 0.7rem;
-          margin-top: 0.35rem; }
-  .content_ventas .grafica {
-    height: 74%;
-    width: 100%;
-    background-color: yellow; }
-    .content_ventas .grafica .recarga {
-      float: right;
-      width: 1.4rem;
-      height: 1.4rem;
-      background-color: #FF2E25;
-      right: 0.5rem;
-      top: 9.7rem;
-      border-radius: 5px;
-      background-repeat: no-repeat;
-      background-size: 1.8rem;
-      background-position: center;
-      background-image: url("/dashboard/src/icon/icon-reload.png");
-      background-size: 1rem;
-      margin-top: 0.4rem;
-      margin-right: 0.4rem;
-      border-radius: 4px; }
-      .content_ventas .grafica .recarga:hover {
-        transform: scale(0.99);
-        cursor: pointer; }
+        align-items: center;
+        justify-content: center;
+        margin-left: 0.2rem; }
+        .content_ventas .detallado .total-ventas .valor .v1 {
+          height: 86%;
+          width: 95%;
+          display: flex; }
+          .content_ventas .detallado .total-ventas .valor .v1 .ventas {
+            width: 70%;
+            height: 100%; }
+            .content_ventas .detallado .total-ventas .valor .v1 .ventas p {
+              margin: 0;
+              font-family: 'Roboto', sans-serif; }
+              .content_ventas .detallado .total-ventas .valor .v1 .ventas p strong {
+                font-size: 0.7rem; }
+            .content_ventas .detallado .total-ventas .valor .v1 .ventas:last-child {
+              font-size: 1.4rem;
+              line-height: 1.5rem; }
+        .content_ventas .detallado .total-ventas .valor .pedidos {
+          width: 30%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          text-align: right; }
+          .content_ventas .detallado .total-ventas .valor .pedidos p {
+            margin: 0;
+            font-size: 0.7rem;
+            margin-top: 0.35rem; }
+    .content_ventas .detallado .grafica {
+      width: 100%;
+      height: 15%;
+      border-bottom: 1px solid #9b9b9b; }

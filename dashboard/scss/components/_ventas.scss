@@ -86,73 +86,55 @@
                 }
             }
         }
-    }
-    .total-ventas {
-        width: 100%;
-        height: 30%;
-        border-bottom: 1px solid #9b9b9b;
-        .valor {
-            height: 33%;
-            width: 98%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-left: 0.2rem;
-            .v1 {
-                height: 86%;
-                width: 95%;
+        .total-ventas {
+            width: 100%;
+            height: 30%;
+            border-bottom: 1px solid #9b9b9b;
+            .valor {
+                height: 33%;
+                width: 98%;
                 display: flex;
-                .ventas {
-                    width: 70%;
-                    height: 100%;
-                    p {
-                        margin: 0;
-                        @include roboto;
-                        strong {
-                            font-size: 0.7rem;
+                align-items: center;
+                justify-content: center;
+                margin-left: 0.2rem;
+                .v1 {
+                    height: 86%;
+                    width: 95%;
+                    display: flex;
+                    .ventas {
+                        width: 70%;
+                        height: 100%;
+                        p {
+                            margin: 0;
+                            @include roboto;
+                            strong {
+                                font-size: 0.7rem;
+                            }
+                        }
+                        &:last-child {
+                            font-size: 1.4rem;
+                            line-height: 1.5rem;
                         }
                     }
-                    &:last-child {
-                        font-size: 1.4rem;
-                        line-height: 1.5rem;
-                    }
                 }
-            }
-            .pedidos {
-                width: 30%;
-                height: 100%;
-                display: flex;
-                flex-direction: column;
-                text-align: right;
-                p {
-                    margin: 0;
-                    font-size: 0.7rem;
-                    margin-top: 0.35rem;
+                .pedidos {
+                    width: 30%;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    text-align: right;
+                    p {
+                        margin: 0;
+                        font-size: 0.7rem;
+                        margin-top: 0.35rem;
+                    }
                 }
             }
         }
-    }
-    .grafica {
-        height: 74%;
-        width: 100%;
-        background-color: yellow;
-        .recarga {
-            float: right;
-            width: 1.4rem;
-            height: 1.4rem;
-            background-color: $colorNavbar-rojo;
-            right: 0.5rem;
-            top: 9.7rem;
-            border-radius: 5px;
-            @include icon-reload;
-            background-size: 1rem;
-            margin-top: 0.4rem;
-            margin-right: 0.4rem;
-            border-radius: 4px;
-            &:hover {
-                transform: scale(0.99);
-                cursor: pointer;
-            }
+        .grafica {
+            width: 100%;
+            height: 15%;
+            border-bottom: 1px solid #9b9b9b;
         }
     }
 }
