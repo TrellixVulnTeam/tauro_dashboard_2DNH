@@ -1,0 +1,278 @@
+.aside {
+    position: fixed;
+    width: 84%;
+    height: 100vh;
+    right: 0;
+    top: 10%;
+    background-color: $color-aside;
+    z-index: 1;
+    .aside_title {
+        width: 100%;
+        height: 9%;
+        color: $color-textos;
+        @include d-flexcenter;
+        @include roboto;
+        font-size: 1.4rem;
+    }
+    .ventana_emergente {
+        width: 28rem;
+        height: 32rem;
+        top: 1rem;
+        position: absolute;
+        background-color: #FF2E25;
+        right: 22rem;
+        box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.25);
+        display: grid;
+        border-radius: 1rem;
+        grid-template-columns: 1fr;
+        grid-template-rows: 8% 79% 9% 4%;
+        .cerrar {
+            display: flex;
+            justify-content: flex-end;
+            width: 100%;
+            height: 100%;
+            button {
+                background: transparent;
+                height: 100%;
+                margin-top: 0.2rem;
+                margin-right: 0.8rem;
+                border: none;
+                &:hover {
+                    transform: scale(0.95);
+                }
+                img {
+                    width: 1.5rem;
+                    height: 1.5rem;
+                }
+            }
+        }
+        .formulario {
+            height: 100%;
+            width: 100%;
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 2;
+            grid-row-end: 3;
+            display: flex;
+            justify-content: center;
+            .contenido_form {
+                width: 100%;
+                .form-encabezado {
+                    width: 100%;
+                    height: 16%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    h1 {
+                        color: white;
+                        font-size: 1.6rem;
+                        height: 3rem;
+                        display: flex;
+                        justify-content: center;
+                        margin: 0;
+                    }
+                    p {
+                        line-height: 2rem;
+                        margin-bottom: 0.6rem;
+                        color: white;
+                    }
+                }
+                .form {
+                    overflow-y: scroll;
+                    height: 83%;
+                    width: 97%;
+                    form {
+                        width: 97%;
+                        ul {
+                            margin-top: 0.5rem;
+                            li {
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                margin-top: 0.4rem;
+                                color: white;
+                                select {
+                                    height: 2rem;
+                                    width: 13.2rem;
+                                    padding-left: 9px;
+                                    border: none;
+                                    border-radius: 4px;
+                                    outline: none;
+                                    cursor: pointer;
+                                    @include roboto;
+                                }
+                                input {
+                                    width: 56%;
+                                    background: none;
+                                    border: none;
+                                    border-bottom: 1.8px solid white;
+                                    outline: none;
+                                    color: white;
+                                    padding-left: 9px;
+                                    @include roboto;
+                                }
+                                .selector_cant {
+                                    width: 13.3rem;
+                                    height: 2.2rem;
+                                    .selector {
+                                        width: 30%;
+                                        height: 95%;
+                                        border: 1px solid white;
+                                        float: left;
+                                        display: flex;
+                                        border-radius: 11px;
+                                        outline: none;
+                                        .numero {
+                                            width: 40%;
+                                            height: 100%;
+                                            border-left: 1px solid white;
+                                            border-right: 1px solid white;
+                                            display: flex;
+                                            justify-content: center;
+                                            align-items: center;
+                                            p {
+                                                margin: 0;
+                                            }
+                                        }
+                                    }
+                                    .operador {
+                                        width: 30%;
+                                        height: 100%;
+                                        border: none;
+                                        color: $colorNavbar-rojo;
+                                        &:hover {
+                                            transform: scale(1.3);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .pagos {
+                            display: flex;
+                            flex-direction: column;
+                            &:first-child {
+                                width: 100%;
+                                p {
+                                    margin: 0;
+                                }
+                            }
+                            .container_medios {
+                                display: grid;
+                                grid-template-columns: repeat(6, 1fr);
+                                grid-template-rows: 1fr;
+                                height: 3.5rem;
+                                p {
+                                    font-size: 0.6rem;
+                                    text-align: center;
+                                }
+                                .input {
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    height: 50%;
+                                }
+                                input {
+                                    cursor: pointer;
+                                }
+                                .label {
+                                    width: 100%;
+                                    height: 50%;
+                                }
+                            }
+                            .credito {
+                                grid-column-start: 1;
+                                grid-column-end: 2;
+                            }
+                            .debito {
+                                grid-column-start: 2;
+                                grid-column-end: 3;
+                            }
+                            .trans_banc {
+                                grid-column-start: 3;
+                                grid-column-end: 4;
+                            }
+                            .efectivo {
+                                grid-column-start: 4;
+                                grid-column-end: 5;
+                            }
+                            .nequi {
+                                grid-column-start: 5;
+                                grid-column-end: 6;
+                            }
+                            .daviplata {
+                                grid-column-start: 6;
+                                grid-column-end: 7;
+                            }
+                        }
+                        textarea {
+                            resize: none;
+                            outline: none;
+                            @include roboto;
+                            padding: 0.3rem;
+                            width: 47%;
+                            border-radius: 5px;
+                        }
+                    }
+                    .container_total {
+                        width: 100%;
+                        height: 3rem;
+                        display: flex;
+                        align-items: center;
+                        li {
+                            height: 100%;
+                        }
+                        .total {
+                            width: 36%;
+                            label {
+                                width: 28%;
+                            }
+                            span {
+                                width: 0.5rem;
+                                margin-left: 0.5rem;
+                            }
+                            input[type=text] {
+                                width: 60%;
+                            }
+                        }
+                        .checkbox_acept {
+                            width: 68%;
+                            p {
+                                margin: 0;
+                                strong {
+                                    font-size: 0.8rem;
+                                }
+                            }
+                            input {
+                                width: 12%;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.inputs {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    input {
+        width: 8rem;
+        height: 2rem;
+        border-radius: 7px;
+        border: none;
+        font-family: 'Roboto', sans-serif;
+        &:hover {
+            transform: scale(0.95);
+        }
+    }
+}

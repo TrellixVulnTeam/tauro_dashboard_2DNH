@@ -1,0 +1,15 @@
+// Template
+@import "./base/reset";
+@import "utilities/bootstrap";
+@import "utilities/variables";
+@import "utilities/mixins";
+@import "utilities/fonts";
+@import "utilities/images";
+@import "utilities/scroll";
+@import "components/header";
+@import "components/navbar";
+@import "components/aside";
+@import "layout/grid";
+@import "layout/mediaqueries";
+// Ventas
+@import "components/ventas";

@@ -1,0 +1,55 @@
+@mixin icon {
+    background-repeat: no-repeat;
+    background-size: 1.8rem;
+    background-position: center;
+}
+
+@mixin icon-ventas {
+    @include icon;
+    background-image: url("../src/icon/icon-disc.png");
+}
+
+@mixin icon-equipo {
+    @include icon;
+    background-image: url("../src/icon/icon-team.png");
+}
+
+@mixin icon-mensajeria {
+    @include icon;
+    background-image: url("../src/icon/icon-delivery.png");
+}
+
+@mixin icon-contabilidad {
+    @include icon;
+    background-image: url("../src/icon/icon-money.png");
+}
+
+@mixin icon-inventario {
+    @include icon;
+    background-image: url("../src/icon/icon-stock.png");
+}
+
+@mixin icon-logout {
+    @include icon;
+    background-image: url("../src/icon/icon-logout.png");
+}
+
+@mixin icon-add {
+    @include icon;
+    background-image: url("../src/icon/icon-add.png");
+}
+
+@mixin icon-dark {
+    @include icon;
+    background-image: url("../src/icon/icon-darkmode.png");
+}
+
+@mixin icon-whatsapp {
+    @include icon;
+    background-image: url("../src/icon/icon-whatsapp.png");
+}
+
+@mixin icon-reload {
+    @include icon;
+    background-image: url("/dashboard/src/icon/icon-reload.png");
+}

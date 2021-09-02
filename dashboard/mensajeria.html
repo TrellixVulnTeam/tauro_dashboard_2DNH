@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="node_modules/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="icon" href="./src/icon/icon-principal.ico">
+    <title>Tauro | Sistema de gestión logística</title>
+</head>
+
+<body>
+    <!-- Inicio del navbar -->
+    <section class="section">
+        <div class="logo-responsive_2"></div>
+        <div class="logo">
+            <a href="./index.html">
+                <div class="logo-responsive"></div>
+                <h1>tauro</h1>
+                <p>Sistema de gestión logistica y contable</p>
+            </a>
+        </div>
+        <nav class="menu">
+            <ul>
+                <li>
+                    <a href="./ventas.html">
+                        <div class="icon ventas"></div>
+                        <p>Mis ventas</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="./equipo.html">
+                        <div class="icon equipo"></div>
+                        <p>Mi equipo</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="./mensajeria.html">
+                        <div class="icon mensajeria"></div>
+                        <p>Mensajeria</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="./contabilidad.html">
+                        <div class="icon contabilidad"></div>
+                        <p>Contabilidad</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="./inventario.html"><img src="./src/png/icon-stock.png" alt="">
+                        <div class="icon inventario"></div>
+                        <p>Inventario</p>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="publicidad">
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="./src/png/negocios.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./src/png/Imagen_2.jpeg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./src/png/Imagen_3.jfif" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+            </div>
+        </div>
+        <div class="button">
+            <button>
+                <div class="logout"></div>
+            </button>
+        </div>
+        <div>
+
+        </div>
+
+    </section>
+    <!-- Final del navbar -->
+    <!-- Inicio del header -->
+    <header class="header">
+        <div class="logo-responsive_4"></div>
+        <div class="header_search">
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Buscar..." aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Buscar</button>
+            </form>
+        </div>
+        <div class="header_links">
+            <div class="link_container">
+                <button class="container_button" onclick="clickCerrar()">
+                    <div class="container_button-add"></div>
+                </button>
+                <button class="container_button">
+                    <div class="container_button-dark"></div>
+                </button>
+                <button class="container_button">
+                    <div class="container_button-whatsapp"></div>
+                </button>
+            </div>
+        </div>
+        <div class="header_dropdown d-flex">
+            <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="./src/png/Recurso 4.png" alt="">
+                Perfil
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" href="#">Mi perfil</a></li>
+                <li><a class="dropdown-item" href="#">Ayuda</a></li>
+                <li><a class="dropdown-item" href="#">Privacidad</a></li>
+            </ul>
+        </div>
+    </header>
+    <!-- Fin del header -->
+    <!-- Inicio del aside -->
+    <div class="aside">
+        <div class="aside_title">Mensajeria</div>
+        <div class="content-grid">
+
+        </div>
+        <!-- Ventana emergente de agendamiento -->
+        <div class="ventana_emergente" id="emergente">
+            <div class="cerrar">
+                <button onclick="clickCerrar()"><img src="./src/icon/icon-close.png" alt=""></button>
+            </div>
+            <div class="formulario">
+                <div class="contenido_form">
+                    <div class="form-encabezado">
+                        <h1>Agendar una entrega</h1>
+                        <p><strong>ID: 000056</strong></p>
+                    </div>
+                    <div class="form">
+                        <form action="">
+                            <ul>
+                                <li>
+                                    <label for="cliente" class="color-rojo"><strong>Nombre y apellido:</strong> </label>
+                                    <input type="text" name="cliente" autocomplete="off">
+                                </li>
+                                <li>
+                                    <label for="contacto" class="color-rojo"><strong>Número de contacto:</strong></label>
+                                    <input type="text" name="contacto" autocomplete="off">
+                                </li>
+                                <li>
+                                    <label for="ciudad" class="color-rojo"><strong>Ciudad: </strong></label>
+                                    <input type="text" name="ciudad" autocomplete="off">
+                                </li>
+                                <li>
+                                    <label for="direccion" class="color-rojo"><strong>Dirección: </strong></label>
+                                    <input type="text" name="direccion" autocomplete="off">
+                                </li>
+                                <li>
+                                    <label for="localidad" class="color-rojo"><strong>Localidad: </strong></label>
+                                    <input type="text" name="localidad" autocomplete="off">
+                                </li>
+                                <li>
+                                    <label for="barrio" class="color-rojo"><strong>Barrio: </strong></label>
+                                    <input type="text" name="barrio" autocomplete="off">
+                                </li>
+
+
+                                <li>
+                                    <p><strong>Producto</strong></p>
+                                    <select name="producto">
+                                        <option value="mascarilla_facial">Mascarilla Facial</option>
+                                        <option value="serum_facial">Sérum facial</option>
+                                        <option value="serum_pestañas">Sérum para pestañas</option>
+                                        <option value="balsamo_facial">Bálsamo facial</option>
+                                        <option value="balsamo_cejas">Bálsamo de cejas</option>
+                                    </select>
+                                </li>
+                                <li>
+                                    <p class="color-rojo"><strong>Cantidad</strong></p>
+                                    <select name="cantidad" id="">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                            </select>
+                                </li>
+                                <li>
+                                    <label for="total" class="color-rojo"><strong>Total</strong></label>
+                                    <input type="text" name="total">
+                                </li>
+                                <li>
+                                    <p class="color-rojo"><strong>Medio de pago</strong></p>
+                                    <p class="color-rojo">Tarjeta crédito</p>
+                                    <input type="radio" name="pago" value="credito">
+                                    <p class="color-rojo">Tarjeta débito</p>
+                                    <input type="radio" name="pago" value="debito">
+                                    <p class="color-rojo">Transferencia bancaria</p>
+                                    <input type="radio" name="pago" value="transferencia">
+                                    <p class="color-rojo">Efectivo</p>
+                                    <input type="radio" name="pago" value="efectivo">
+                                </li>
+                                <li>
+                                    <p class="color-rojo"><strong>Comentarios adicionales</strong></p>
+                                    <textarea name="" id="" cols="20" rows="4"></textarea>
+                                </li>
+                                <li>
+                                    <p class="color-rojo"><strong>He confirmado los datos de entrega</strong></p>
+                                    <input type="checkbox" name="acepta" value="1">
+                                </li>
+                            </ul>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="inputs">
+                <input type="submit" value="Agendar">
+                <input type="reset" value="Limpiar">
+                <input onclick="clickCerrar()" type="button" value="Cancelar">
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Final del aside -->
+
+
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+    <script src="./scripts.js"></script>
+</body>
+
+</html>

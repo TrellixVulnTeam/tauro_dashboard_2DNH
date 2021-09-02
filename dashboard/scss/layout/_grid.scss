@@ -1,0 +1,73 @@
+.content-grid {
+    width: 100%;
+    height: 100%;
+    .content {
+        width: 90%;
+        height: 22rem;
+        max-width: 1000px;
+        margin: auto;
+        padding: 1rem;
+        font-size: 50px;
+        line-height: 50px;
+        text-align: center;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas: "a1 a2 a3 a3 a4" "a5 a5 a3 a3 a6" "a7 a8 a9 a9 a10";
+        grid-gap: 0.5rem;
+        div {
+            color: #fff;
+            background: white;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, .25);
+            border-radius: 7px;
+            cursor: pointer;
+            &:hover {
+                transform: scale(0.95);
+                transition: 0.3s;
+            }
+        }
+        a {
+            width: 100%;
+            height: 100%;
+        }
+        .agendar {
+            button {
+                height: 100%;
+                width: 100%;
+                border: none;
+                background-color: white;
+                img {
+                    width: 4rem;
+                    height: 4rem;
+                }
+                p {
+                    font-size: 1rem;
+                    @include roboto;
+                    color: $color-textos;
+                    line-height: 1rem;
+                    margin: 0;
+                    margin-top: 0.5rem;
+                }
+            }
+        }
+        .desempeño {
+            background: #ffffff;
+            grid-column-start: a3;
+            grid-column-end: a3;
+            grid-row-start: a3;
+            grid-row-end: a3;
+        }
+        .equipo {
+            grid-column-start: a5;
+            grid-column-end: a5;
+            grid-row-start: a5;
+            grid-row-end: a5;
+        }
+        .mensajeria {
+            grid-column-start: a9;
+            grid-column-end: a9;
+            grid-row-start: a9;
+            grid-row-end: a9;
+        }
+    }
+}

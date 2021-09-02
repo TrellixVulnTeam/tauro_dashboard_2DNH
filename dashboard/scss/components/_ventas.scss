@@ -1,0 +1,158 @@
+.aside_ventas {
+    width: 100%;
+    height: 20%;
+    background-color: white;
+    border-bottom: 1px solid #9b9b9b;
+    border-top: 1px solid #9b9b9b;
+    .name {
+        width: 16.4%;
+        height: 9%;
+        position: absolute;
+        right: 0;
+        top: 0;
+        display: flex;
+        align-items: center;
+        @include roboto;
+        .profile_image {
+            background-color: $colorNavbar_rojo;
+            width: 23%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 2rem;
+            width: 2rem;
+            color: white;
+            border-radius: 1rem;
+        }
+        .profile_name {
+            width: 60%;
+            margin-right: 1rem;
+            border-radius: 1rem;
+            margin-left: 1rem;
+        }
+    }
+}
+
+.content_ventas {
+    height: 100vh;
+    width: 100%;
+    .detallado {
+        float: right;
+        height: 100vh;
+        width: 27%;
+        background-color: white;
+        border-left: 1px solid #9b9b9b;
+        .canales {
+            height: 7%;
+            width: 100%;
+            border-bottom: 1px solid #9b9b9b;
+            display: flex;
+            .canales_detalle {
+                width: 50%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                select {
+                    width: 87%;
+                    font-size: 0.82rem;
+                    height: 60%;
+                    padding-left: 0.3rem;
+                    padding-bottom: 0.2rem;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    outline: none;
+                    margin-left: 0.6rem;
+                    @include roboto;
+                }
+            }
+            .canales_dia {
+                width: 50%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                select {
+                    width: 87%;
+                    height: 60%;
+                    font-size: 0.82rem;
+                    padding-left: 0.3rem;
+                    padding-bottom: 0.2rem;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    outline: none;
+                    margin-right: 0.6rem;
+                    @include roboto;
+                }
+            }
+        }
+    }
+    .total-ventas {
+        width: 100%;
+        height: 30%;
+        border-bottom: 1px solid #9b9b9b;
+        .valor {
+            height: 33%;
+            width: 98%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 0.2rem;
+            .v1 {
+                height: 86%;
+                width: 95%;
+                display: flex;
+                .ventas {
+                    width: 70%;
+                    height: 100%;
+                    p {
+                        margin: 0;
+                        @include roboto;
+                        strong {
+                            font-size: 0.7rem;
+                        }
+                    }
+                    &:last-child {
+                        font-size: 1.4rem;
+                        line-height: 1.5rem;
+                    }
+                }
+            }
+            .pedidos {
+                width: 30%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                text-align: right;
+                p {
+                    margin: 0;
+                    font-size: 0.7rem;
+                    margin-top: 0.35rem;
+                }
+            }
+        }
+    }
+    .grafica {
+        height: 74%;
+        width: 100%;
+        background-color: yellow;
+        .recarga {
+            float: right;
+            width: 1.4rem;
+            height: 1.4rem;
+            background-color: $colorNavbar-rojo;
+            right: 0.5rem;
+            top: 9.7rem;
+            border-radius: 5px;
+            @include icon-reload;
+            background-size: 1rem;
+            margin-top: 0.4rem;
+            margin-right: 0.4rem;
+            border-radius: 4px;
+            &:hover {
+                transform: scale(0.99);
+                cursor: pointer;
+            }
+        }
+    }
+}

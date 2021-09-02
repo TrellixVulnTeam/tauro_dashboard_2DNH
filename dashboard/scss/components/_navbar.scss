@@ -1,0 +1,123 @@
+// Inicio del navbar
+.section {
+    width: 16%;
+    height: 100vh;
+    float: right;
+    background-color: $colorNavbar-rojo;
+    .logo {
+        width: 100%;
+        height: 8rem;
+        padding-bottom: 0.5rem;
+        @include d-flexcenter;
+        a {
+            width: 80%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            h1 {
+                width: 80%;
+                height: 43%;
+                margin-bottom: 0.4rem;
+                line-height: 3rem;
+                font-size: 4rem;
+                @include dosis;
+                color: $color-blanco;
+                text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.11);
+            }
+            p {
+                width: 100%;
+                height: 22%;
+                margin: 0 !important;
+                font-size: 0.64rem;
+                @include roboto;
+                color: $color-blanco;
+                border-bottom: 1px solid $color-blanco;
+            }
+        }
+    }
+    .menu {
+        width: 100%;
+        height: 36%;
+        @include d-flexcenter;
+        ul {
+            width: 88%;
+            height: 90%;
+            padding: 0;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(5, 1fr);
+            grid-gap: 5px;
+            li {
+                @include wh-100;
+                background-color: $color-menu-tiles;
+                border-radius: 5px;
+                a {
+                    @include wh-100;
+                    @include d-flexcenter;
+                    @include roboto;
+                    text-decoration: none;
+                    color: $color-textos;
+                    .icon {
+                        width: 32%;
+                        height: 100%;
+                    }
+                    .ventas {
+                        @include icon-ventas;
+                    }
+                    .equipo {
+                        @include icon-equipo;
+                    }
+                    .mensajeria {
+                        @include icon-mensajeria;
+                    }
+                    .contabilidad {
+                        @include icon-contabilidad;
+                    }
+                    .inventario {
+                        @include icon-inventario;
+                    }
+                    p {
+                        width: 100%;
+                        margin: 0 !important;
+                    }
+                }
+                &:hover {
+                    transform: scale(0.95);
+                }
+            }
+        }
+    }
+    .publicidad {
+        height: 30%;
+        #carouselExampleControls {
+            height: 100%;
+        }
+    }
+    .button {
+        width: 100%;
+        height: 8%;
+        @include d-flexcenter;
+        button {
+            height: 100%;
+            width: 25%;
+            border: none;
+            border-radius: 16px;
+            background-color: $color-blanco;
+            @include d-flexcenter;
+            &:hover {
+                transform: scale(0.95);
+            }
+            .logout {
+                width: 63%;
+                height: 63%;
+                margin: 0 !important;
+                @include icon-logout;
+            }
+        }
+    }
+}
+
+// Fin del navbar

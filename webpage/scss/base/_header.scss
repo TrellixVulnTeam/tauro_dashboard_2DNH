@@ -1,0 +1,101 @@
+// Inicio CSS
+.header {
+    width: 100%;
+    height: 11%;
+    position: relative;
+    background-color: #FF2E25;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .content {
+        width: 93%;
+        height: 87%;
+        display: flex;
+        justify-content: space-between;
+        .logo,
+        .barra1,
+        .barra2 {
+            height: 100%;
+        }
+        .logo {
+            width: 11rem;
+            display: flex;
+            justify-content: start;
+            a {
+                height: auto;
+                width: auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                h1 {
+                    font-size: 3.5rem;
+                    @include dosis;
+                    color: white;
+                    line-height: 2.8rem;
+                }
+            }
+        }
+        .barra2 {
+            width: 32rem;
+            display: flex;
+            justify-content: space-between;
+            .item {
+                height: 100%;
+                width: 25%;
+            }
+            .precios {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                a {
+                    width: 100%;
+                    P {
+                        line-height: 1rem;
+                        margin-bottom: 0;
+                        width: 45%;
+                    }
+                }
+            }
+            .recursos {
+                width: 11rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .login {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                a {
+                    text-decoration: none;
+                    p {
+                        @include roboto;
+                        color: white;
+                        margin: 0;
+                        opacity: 88%;
+                        &:hover {
+                            opacity: 100%;
+                        }
+                    }
+                }
+            }
+            .comenzar {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                button {
+                    width: 80%;
+                    height: 80%;
+                    border: none;
+                    background-color: rgba(255, 255, 255, 0.8);
+                    @include roboto;
+                    border-radius: 0.2rem;
+                    cursor: pointer;
+                    &:hover {
+                        transform: scale(0.95);
+                    }
+                }
+            }
+        }
+    }
+}
